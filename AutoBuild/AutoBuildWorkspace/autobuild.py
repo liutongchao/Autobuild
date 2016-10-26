@@ -12,14 +12,11 @@ APPNAME = "AutoBuildWorkspace"  #项目名称
 VERSION = "1.0.0"  #打包版本号 会根据不同的版本创建文件夹（与项目本身的版本号无关）
 
 CONFIGURATION = "Debug"  #Release 环境  Debug 环境
-# CONFIGURATION = "Debug"	
-
+# CONFIGURATION = "Debug"
 SCHEME = "%s" %(APPNAME) #scheme 就是对应的target
-
 PROFILE = "AppStore" #配置文件分为三种 AdHoc  Dev  AppStore 分别对应三总配置文件
 
 OUTPUT = "./Packge/%s" %(CONFIGURATION)  #打包导出ipa文件路径（请确保 “%s” 之前的文件夹正确并存在）
-
 
 WORKSPACE = "%s.xcworkspace" %(APPNAME)
 PROJECT = "%s.xcodeproj" %(APPNAME)
