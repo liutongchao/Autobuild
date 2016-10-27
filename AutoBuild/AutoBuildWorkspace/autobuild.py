@@ -21,7 +21,7 @@ OUTPUT = "./Packge/%s" %(CONFIGURATION)  #打包导出ipa文件路径（请确�
 WORKSPACE = "%s.xcworkspace" %(APPNAME)
 PROJECT = "%s.xcodeproj" %(APPNAME)
 
-#如果在项目中没有用到 pod 请注释掉此行
+#如果在项目中用到 pod 请启用此行 ！！！！！！！！！
 PROJECT = None
 
 SDK = "iphoneos"
