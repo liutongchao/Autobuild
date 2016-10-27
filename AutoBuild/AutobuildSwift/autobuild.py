@@ -27,6 +27,12 @@ PROJECT = "%s.xcodeproj" %(APPNAME)
 #如果在项目中没有用到 pod 请注释掉此行
 # PROJECT = None
 
+
+#蒲公英上传
+OPEN_PYUPLOAD = False  #是否开启蒲公英上传功能  True  False
+USER_KEY = "*********************"
+API_KEY = "*********************"
+
 SDK = "iphoneos"
 
 #启动打印函数
@@ -59,6 +65,14 @@ def createDir(ipaDir):
 	process.wait()
 	print "***************create Dir*********************\n %s \n*******************************************" %(ipaDir)
 
+def uploadPgy(ipaPath):
+	print "\n***************开始上传到蒲公英*********************\n"
+	uploadCmd = 'curl -F \"file=@%s\" -F \"uKey=%s\" -F \"_api_key=%s\" https://www.pgyer.com/apiv1/app/upload' %(ipaPath, USER_KEY, API_KEY)
+	process = subprocess.Popen(uploadCmd, shell = True)
+	process.wait()
+	print "\n\n***************上传结束 Code=0 为上传成功*********************\n"
+
+
 #打包project
 def buildProject(project, scheme, output):
 
@@ -74,7 +88,12 @@ def buildProject(project, scheme, output):
 	process = subprocess.Popen(signCmd, shell = True)
 	process.wait()
 	print "*************************signCmd*******************************\n %s \n********************************************************" %(signCmd)
+	
+	ipaPath = "%s/%s/%s_%s_%s/%s.ipa" %(output, VERSION,APPNAME,VERSION,CONFIGURATION,SCHEME)
 
+	if OPEN_PYUPLOAD == True:
+		uploadPgy(ipaPath)
+	
 	cleanBuildDir("./build")
 
 #打包workspace
@@ -92,6 +111,11 @@ def buildWorkspace(workspace, scheme, output):
 	process = subprocess.Popen(signCmd, shell = True)
 	process.wait()
 	print "*************************signCmd*******************************\n %s \n********************************************************" %(signCmd)
+
+	ipaPath = "%s/%s/%s_%s_%s/%s.ipa" %(output, VERSION,APPNAME,VERSION,CONFIGURATION,SCHEME)
+
+	if OPEN_PYUPLOAD == True:
+		uploadPgy(ipaPath)
 
 	cleanBuildDir("./build")
 
@@ -115,6 +139,8 @@ def xcbuild(options):
 
 
 def main():
+
+
 
 	parser = OptionParser()
 	parser.add_option("-w", "--workspace", default=WORKSPACE, help="Build the workspace test.xcworkspace.")

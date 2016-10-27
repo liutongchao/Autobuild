@@ -287,6 +287,7 @@
 				TargetAttributes = {
 					57956AEB1DC1A9830096B969 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = FEN4DYVP62;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -533,7 +534,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FEN4DYVP62;
 				INFOPLIST_FILE = AutobuildProOCS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.isprint.Inspection;
@@ -546,7 +547,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FEN4DYVP62;
 				INFOPLIST_FILE = AutobuildProOCS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.isprint.Inspection;
@@ -628,6 +629,7 @@
 				57956B1B1DC1A9840096B969 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57956B1C1DC1A9840096B969 /* Build configuration list for PBXNativeTarget "AutobuildProOCSTests" */ = {
 			isa = XCConfigurationList;
@@ -636,6 +638,7 @@
 				57956B1E1DC1A9840096B969 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57956B1F1DC1A9840096B969 /* Build configuration list for PBXNativeTarget "AutobuildProOCSUITests" */ = {
 			isa = XCConfigurationList;
@@ -644,6 +647,7 @@
 				57956B211DC1A9840096B969 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

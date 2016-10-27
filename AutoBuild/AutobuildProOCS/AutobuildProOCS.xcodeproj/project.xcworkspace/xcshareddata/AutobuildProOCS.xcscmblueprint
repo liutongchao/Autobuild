@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5B38D8400A813222D0B5B25E1A5533E980AFF7E9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EF8AAB5D48718313968E67A84B50952F6676DAC9" : 9223372036854775807,
+    "5B38D8400A813222D0B5B25E1A5533E980AFF7E9" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0059632C-DE8C-48FB-AB03-5B785F9521FC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EF8AAB5D48718313968E67A84B50952F6676DAC9" : "..",
+    "5B38D8400A813222D0B5B25E1A5533E980AFF7E9" : "Autobuild\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AutobuildProOCS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AutoBuild\/AutobuildProOCS\/AutobuildProOCS.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/liutongchao\/Autobuild.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5B38D8400A813222D0B5B25E1A5533E980AFF7E9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/liutongchao\/SwiftPos.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EF8AAB5D48718313968E67A84B50952F6676DAC9"
+    }
+  ]
+}
