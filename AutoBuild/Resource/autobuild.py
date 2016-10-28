@@ -16,7 +16,7 @@ CONFIGURATION = "Release"  #Release 环境  Debug 环境
 
 TAGREAT_NAME = "%s" %(PROJECT_NAME) #scheme 就是对应的target
 
-PROFILE = "AdHoc" #配置文件分为三种 AdHoc  Dev  AppStore Ent 分别对应四种配置文件
+PROFILE = "AdHoc" #配置文件分为四种 AdHoc  Dev  AppStore Ent 分别对应四种配置文件
 
 OUTPUT = "./Packge/%s" %(CONFIGURATION)  #打包导出ipa文件路径（请确保 “%s” 之前的文件夹正确并存在）
 
