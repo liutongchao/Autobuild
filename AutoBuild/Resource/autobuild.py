@@ -20,17 +20,20 @@ WORKSPACE = "%s.xcworkspace" %(PROJECT_NAME)
 PROJECT = "%s.xcodeproj" %(PROJECT_NAME)
 SDK = "iphoneos"
 #注意：如果在项目中用到 pod 请启用此行！！！！！！
-#PROJECT = None
+PROJECT = None
 
 #蒲公英上传
 OPEN_PYUPLOAD = False  	#是否开启蒲公英上传功能  True  False
-USER_KEY = "********************"
-API_KEY = "********************"
+USER_KEY = "****************"
+API_KEY = "****************"
+
+#fir.im 上传
+OPEN_FIR_UPLOAD = False  	#是否开启fir.im上传功能  True  False
 
 #AppStore上传
 OPEN_APPSTORE_UPLOAD = False  #是否开启AppStore上传上传功能  True  False
-USER_NAME = "***************"
-USER_PASSWORD = "***************"
+USER_NAME = "****************"
+USER_PASSWORD = "****************"
 
 #启动打印函数
 def printStart():
@@ -43,6 +46,7 @@ def printStart():
 	print "  编译环境：%s" %(CONFIGURATION)
 	print "  证书配置：%s" %(PROFILE)
 	print "  是否上传蒲公英：%s" %(OPEN_PYUPLOAD)
+	print "  是否上传FIR.IM：%s" %(OPEN_FIR_UPLOAD)
 	print "  是否上传AppStore：%s\n" %(OPEN_APPSTORE_UPLOAD)
 	print "*****************************************************************"
 	print "*****************************************************************"
@@ -58,6 +62,7 @@ def printEnd():
 	print "  编译环境：%s" %(CONFIGURATION)
 	print "  证书配置：%s" %(PROFILE)
 	print "  是否上传蒲公英：%s" %(OPEN_PYUPLOAD)
+	print "  是否上传FIR.IM：%s" %(OPEN_FIR_UPLOAD)
 	print "  是否上传AppStore：%s\n" %(OPEN_APPSTORE_UPLOAD)
 	print "*****************************************************************"
 	print "*****************************************************************"
@@ -80,6 +85,14 @@ def uploadPgy(ipaPath):
 	process = subprocess.Popen(uploadCmd, shell = True)
 	process.wait()
 	print "\n\n***************上传结束 Code=0 为上传成功*********************\n"
+
+def uploadFir(ipaPath):
+	print "\n***************开始上传到FIR.IM*********************\n"
+	uploadCmd = 'fir p %s' %(ipaPath)
+	process = subprocess.Popen(uploadCmd, shell = True)
+	process.wait()
+	print "\n\n***************上传结束 Published succeed 为上传成功*********************\n"
+	
 
 def uploadAppStore(ipaPath):
 
@@ -128,6 +141,10 @@ def xcbuild():
 	#蒲公英上传
 	if OPEN_PYUPLOAD == True:
 		uploadPgy(ipaPath)
+
+	#FIR.IM上传
+	if OPEN_FIR_UPLOAD == True:
+		uploadFir(ipaPath)
 
 	#AppStore上传
 	if OPEN_APPSTORE_UPLOAD == True:
