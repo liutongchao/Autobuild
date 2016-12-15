@@ -46,15 +46,25 @@ Xcode 必须为 Xcode 8.0 以上 （因为8.0整合了证书配置，大大简�
     USER_PASSWORD = "***************"
 
 `PROJECT_NAME `   就是你项目工程的名字
+
 `VERSION`  打包版本号 会根据不同的版本创建文件夹（与项目本身的版本号无关）
+
 `CONFIGURATION` Release 环境  Debug 环境
+
 `TAGREAT_NAME `  就是target名（如果项目有多个target那么要指定target，如果只有一个target 则不用修改）
+
 `PROFILE` 配置文件分为四种 AdHoc  Dev  AppStore Ent 分别对应四种配置文件
+
 `OUTPUT` 打包导出ipa文件路径，比如想导出到桌面上就把“./Packge/” 替换成 “/Users/`用户名`/Desktop/”（请确保 “%s” 之前的文件夹正确并存在）
+
 `PROJECT = None`   如果你的工程是以 `.xcworkspace` 运行的，请启用此行!!!
+
 `OPEN_PYUPLOAD ` 蒲公英应用托管上传，默认为False，如果需要上传请设置为True，并填入蒲公英账号的 USER_KEY 和  API_KEY。
+
 `OPEN_FIR_UPLOAD ` Fir.im上传，需要自己配置fir-cli,后面会有相关资料，如何配置fir-cli
+
 `OPEN_APPSTORE_UPLOAD ` AppStore自动上传，默认为False，如果需要上传到AppStore，请设置为True，并填入开发者账号 和 密码。
+
 > ######注意： `PROJECT = None` 如果你的工程是以 `.xcworkspace` 运行的，请启用此行!!!
 
 #####3. 确保你的项目已经启用自动签名功能，并能够在真机上运行。
