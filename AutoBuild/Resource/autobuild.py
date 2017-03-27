@@ -81,7 +81,7 @@ def createDir(ipaDir):
 
 def uploadPgy(ipaPath):
 	print "\n***************开始上传到蒲公英*********************\n"
-	uploadCmd = 'curl -F \"file=@%s\" -F \"uKey=%s\" -F \"_api_key=%s\" https://www.pgyer.com/apiv1/app/upload' %(ipaPath, USER_KEY, API_KEY)
+	uploadCmd = 'curl -F \"file=@%s\" -F \"uKey=%s\" -F \"_api_key=%s\" https://qiniu-storage.pgyer.com/apiv1/app/upload' %(ipaPath, USER_KEY, API_KEY)
 	process = subprocess.Popen(uploadCmd, shell = True)
 	process.wait()
 	print "\n\n***************上传结束 Code=0 为上传成功*********************\n"
